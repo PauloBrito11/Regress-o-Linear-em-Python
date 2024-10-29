@@ -34,6 +34,8 @@ Abaixo estão as etapas do processo e suas funções:
 ### Etapa 1
 
 ```python
+#Atribuindo valores
+
 x_values = df[['Session_Duration (hours)']]
 y_values = df[['Calories_Burned']]
 ```
@@ -41,6 +43,8 @@ y_values = df[['Calories_Burned']]
 ### Etapa 2
 
 ```python
+#Criando o modelo e preenchendo com os dados
+
 modelo = ln.LinearRegression()
 modelo.fit(x_values, y_values)
 ```
@@ -74,6 +78,8 @@ plt.show()
 ### Etapa 4
 
 ```python
+#Realizando previsão
+
 valor_p1 = 0.8
 previsao = modelo.predict(np.array([[valor_p1]]))
 
@@ -110,6 +116,8 @@ Lembre-se que todas essas são variáveis INDEPENDENTES e serão utilizadas para
 ### Etapa 1
 
 ```python
+#Atribuindo os valores
+
 x = df.drop(['Calories_Burned', 'Gender', 'Workout_Type'], axis = 1)
 y = df['Calories_Burned'].values.reshape(-1,1)
 ```
@@ -117,6 +125,8 @@ y = df['Calories_Burned'].values.reshape(-1,1)
 ### Etapa 2
 
 ```python
+#Criando o modelo
+
 rl_mult = ln.LinearRegression()
 rl_mult.fit(x,y)
 ```
@@ -124,12 +134,17 @@ rl_mult.fit(x,y)
 ### Etapa 3
 
 ```python
+#Realizando previsão
+
 rl_mult.predict(np.array([[46, 80, 1.80, 160, 150, 150, 1.50, 12.6, 2.1, 4, 3, 3]]))
 ```
 
 ### Etapa 4
 
+
 ```python
+#Verificando o desempenho do modelo
+
 X = df.drop(['Calories_Burned', 'Gender', 'Workout_Type'], axis = 1)
 y = df['Calories_Burned']
 
