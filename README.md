@@ -109,9 +109,37 @@ Lembre-se que todas essas são variáveis INDEPENDENTES e serão utilizadas para
 
 ### Etapa 1
 
+```python
+x = df.drop(['Calories_Burned', 'Gender', 'Workout_Type'], axis = 1)
+y = df['Calories_Burned'].values.reshape(-1,1)
+```
+
 ### Etapa 2
+
+```python
+rl_mult = ln.LinearRegression()
+rl_mult.fit(x,y)
+```
 
 ### Etapa 3
 
+```python
+rl_mult.predict(np.array([[46, 80, 1.80, 160, 150, 150, 1.50, 12.6, 2.1, 4, 3, 3]]))
+```
+
 ### Etapa 4
+
+```python
+X = df.drop(['Calories_Burned', 'Gender', 'Workout_Type'], axis = 1)
+y = df['Calories_Burned']
+
+X2 = sm.add_constant(X)
+est = sm.OLS(y, X2)
+est2 = est.fit()
+print(est2.summary())
+```
+
+![image](https://github.com/user-attachments/assets/6283e0a8-8e36-4352-b706-915b4b14c844)
+
+
 
