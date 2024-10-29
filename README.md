@@ -1,7 +1,7 @@
 # Regressão Linear simples e múltipla utilzando Python
 
 
-Conjunto de dados: kaggle.com/ (adicionar depois)
+Conjunto de dados: https://www.kaggle.com/datasets/valakhorasani/gym-members-exercise-dataset?resource=download
 
 ```python
 
