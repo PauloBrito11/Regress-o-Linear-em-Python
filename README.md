@@ -17,19 +17,32 @@ from sklearn import linear_model as ln
 
 ## Regressão linear simples 
 
-O objetivo é prever quantas calorias são queimadas em relação a duração do treino (em horas), sendo assim, as variáveis utilizadas serão:
+O objetivo deste projeto é prever quantas calorias são queimadas em relação à duração do treino (em horas). 
 
-| Variável                      | Descrição                                 | Unidade                   |
-|-------------------------------|-------------------------------------------|---------------------------|
-| Duração do treino  (X)           | Duração de cada sessão de treino          | Horas por sessão          |
-| Calorias queimadas (Y)            | Calorias queimadas em cada sessão         | Calorias por sessão       |
+### Variáveis Utilizadas
 
-Abaixo estão as etapas do processo e suas funções: 
+| Variável               | Descrição                        | Unidade               |
+|------------------------|----------------------------------|-----------------------|
+| **Duração do treino (X)** | Duração de cada sessão de treino | Horas por sessão      |
+| **Calorias queimadas (Y)** | Calorias queimadas em cada sessão | Calorias por sessão   |
 
-1. Atribuição de valores as variaveis
-2. Criação do modelo e preenchimento com os dados
-3. Verificar os resultados do modelo
-4. Realizar previsões
+---
+
+### Etapas do Processo
+
+1. **Atribuição de valores às variáveis**  
+   Definir os valores de entrada (duração do treino) e os valores de saída (calorias queimadas) para treinamento do modelo.
+
+2. **Criação do modelo e preenchimento com os dados**  
+   Construir o modelo de regressão linear e fornecer os dados necessários para que ele aprenda a relação entre a duração do treino e as calorias queimadas.
+
+3. **Verificação dos resultados do modelo**  
+   Avaliar o desempenho do modelo ajustado com métricas apropriadas para garantir a precisão das previsões.
+
+4. **Realização de previsões**  
+   Usar o modelo treinado para prever quantas calorias são queimadas com base em novas durações de treino.
+
+---
 
 ### Etapa 1
 
@@ -106,12 +119,25 @@ O objetivo continua o mesmo, prever quantas calorias são queimadas, porém, des
 | Experience_Level          | Nível de experiência do indivíduo com treinos                                                | Escala (Ex: 1-10)      |
 | BMI                       | Índice de Massa Corporal, calculado como peso dividido pela altura ao quadrado                | kg/m²                  |
 
-Lembre-se que todas essas são variáveis INDEPENDENTES e serão utilizadas para prever a variável dependente (''Calories_Burned''). O processo segue as seguintes etapas:
+Lembre-se que todas essas são variáveis INDEPENDENTES e serão utilizadas para prever a variável dependente (''Calories_Burned''). 
 
-1. Atribuição de valores às variáveis
-2. Criação do modelo e preenchimento do modelo com os dados
-3. Realizar previsões
-4. Verificar a precisão do modelo
+---
+
+O processo segue as seguintes etapas:
+
+1. **Atribuição de valores às variáveis**  
+   Definir os valores para as variáveis independentes e a variável dependente (`Calories_Burned`), que será o alvo da previsão.
+
+2. **Criação e preenchimento do modelo com os dados**  
+   Construir o modelo de regressão e preencher com os dados para que ele aprenda a relação entre as variáveis independentes e a variável dependente.
+
+3. **Realizar previsões**  
+   Utilizar o modelo treinado para prever o valor de `Calories_Burned` com base em novas entradas das variáveis independentes.
+
+4. **Verificar a precisão do modelo**  
+   Avaliar a precisão das previsões feitas pelo modelo, garantindo que ele produza resultados confiáveis.
+
+---
 
 ### Etapa 1
 
